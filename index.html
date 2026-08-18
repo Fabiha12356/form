@@ -9,16 +9,18 @@
 </head>
 <body>
   <!-- navbaar -->
-   <header class="header">
+   <header id="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex">
-            <div class="container-fluid  ">
+            <div class="container" id="nav-div">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNav">
-                <button>Enrolled Student !</button>
+                <!-- <button>Enrolled Student !</button> -->
+                  <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning"
+                  id="button">Enrolled Student!</button>
                   </div>
             </div>
         </nav>
@@ -29,8 +31,8 @@
 
  <!-- form -->
 
- <div id="parent">
-  <div class="container-fluid d-flex w-75  h-auto justify-content-between" id="child"
+ <div id="parent" class="py-5">
+  <div class="container-fluid d-flex w-75  h-auto justify-content-between " id="child"
   style="border: 1px solid brown;">
     
     <!-- Registration Form Section -->
@@ -62,7 +64,7 @@
      id="inner-child">
       <div class="col">
         <div class="card card-registration "
-        style="border: none;">
+        style="border:none;">
              <h1 class="text-center">signUp</h1>
           <div class="row g-0">
             <div class="col-xl-12">
@@ -139,7 +141,7 @@
     </div>
 
     <!-- Side Panel Linking to Login -->
-    <div id="next-div">
+    <div id="next-div" class="my-1">
       <h1>Welcome Back!</h1>
       <p>Already have an account?</p>
       <a href="./login.html" class="btn-outline">Login</a>

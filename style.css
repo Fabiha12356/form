@@ -1,38 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+      /* NAVBAAR START */
+#header{
+    width: 100%;
+    background-color: transparent !important;
+}
+#nav-div{
+width: 75%;
+background-color: transparent !important;
+background: #ffffff !important;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+border-radius: 5px !important;
+padding: 5px 8px !important;
+}
+#nav-div a {
+    color: blue !important;
+}
+#button{
+    border: none !important;
+    outline:  none !important;
+    background-color:  transparent !important;
+    background-color: blue !important;
+    color:  white !important;
+}
+   /* NAVBAAR END */
+
 #parent{
     border: 1px solid black;
     width: 100%;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-
 }
 #form-div{
-/* border: 1px solid blue; */
-width: 50%;
+border: 1px solid palevioletred;
+width: 25% !important;
 margin-top: 1% !important;
 height: 100v !important;
 }
 #next-div{
 border: 1px solid red;
+width: 35% !important;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  /* border-radius: 100px 0 0 180px; */
 }
 #form-valid{
     border: none !important;
     outline:  none !important;
+    width: 100% !important;
+    border: 1px solid purple !important;
     /* border: 1px solid pink !important; */
-    margin-left: 13% !important;
+    /* margin-left: 10% !important; */
 }
 #child{
-    /* border: 1px solid brown !important; */
-    border-radius: 100px !important;
+    border: 1px solid brown !important;
+    /* border-radius: 100px !important; */
     height: auto !important;
+    display: flex !important;
+    /* gap: 8% !important; */
+    /* justify-content: space-around !important; */
+    width: 100% !important;
 
 }
 #inner-child{
-    /* border: 1px solid green; */
+    border: 1px solid green;
     height: auto !important;
+    width: 150% !important;
 }
 .card-body{
-        /* border: 1px solid green; */
+        border: 1px solid goldenrod !important;
     /* height: auto !important; */
 height: auto !important;
+width: 100% !important;
+}
+.card-registration {
+    border: 1px solid red !important;
+    width: 100% !important;
 }
