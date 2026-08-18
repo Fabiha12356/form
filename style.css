@@ -26,11 +26,12 @@ padding: 5px 8px !important;
     background-color:  transparent !important;
     background-color:  #5b8dfd !important;
     color:  white !important;
+    width: auto !important;
+    margin: 0 !important;
 }
    /* NAVBAAR END */
 
 #parent{
-    /* border: 1px solid black; */
     width: 100%;
     display: flex !important;
     justify-content: center !important;
@@ -41,41 +42,39 @@ padding: 5px 8px !important;
 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     height: auto !important;
     display: flex !important;
-    width: 80% !important;
+    width: 70% !important;
     border-radius: 5% ;
+
 }
 h1{
     font-size: 300%;
     font-weight: bold;
 }
 #form-div{
-width: 25% !important;
+width: 40% !important;
 margin-top: 1% !important;
 height: 100 !important;
+padding-left: 15px;
 }
 #form-valid{
     border: none !important;
     outline:  none !important;
     width: 100% !important;
-    /* border: 1px solid green !important; */
+  
 }
-#inner-child{
-    height: auto !important;
-    width: 180% !important;
-}
-.card-body{
-height: auto !important;
-width: 100% !important;
-}
-#btn{
+
+button{
   border: none !important;
     outline:  none !important;
     background-color:  transparent !important;
     background-color:   #5b8dfd !important;
     color:  white !important;
+    padding: 10px 12px !important;
+    width: 50% !important;
+    margin-bottom: 8% !important;
 }
 #next-div{
-width: 45% !important;
+width: 50% !important;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -83,4 +82,5 @@ align-items: center;
   border-radius: 100px 0 0 180px;
   background: #5b8dfd;
   color: white;
+
 }

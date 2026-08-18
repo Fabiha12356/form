@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <!-- navbaar -->
+
+    <!-- navbaar -->
    <header id="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex">
             <div class="container" id="nav-div">
@@ -28,34 +29,26 @@
     </header>
 
  <!-- navbaar -->
-
-<!-- login page -->
    
-
- <div id="parent" class="py-5">
-
-  <div class="container-fluid d-flex w-75  h-auto justify-content-center  " id="child"
-  style="justify-content: center !important;
-  display: flex !important;
-  gap: 25% !important;">
+ <div id="parent" class="py-5 ">
+  <div class="container-fluid d-flex w-75  h-auto justify-content-between  " id="child">
     
 
  <!-- Side Panel Linking to Login -->
     <div id="next-div" class="my-1"
-    style="border-radius:  0 100px 180px 0;">
-      <h1>Welcome Back!</h1>
-      <p>Already have an account?</p>
-      <a href="./login.html" class="btn-outline">Login</a>
+    style="border-radius: 0 100px 180px 0 ;">
+      <h1>Hello! , Welcome </h1>
+      <p>Don't have an account ?</p>
+       <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2"
+        style="border: 2px solid white !important;
+       padding: 10px 5px !important;
+       width: 35% !important;">SignUp</button>
     </div>
 
 
     <!-- Registration Form Section -->
-    <div id="form-div"
-    style="border: 1px solid purple !important;
-    width: 35% !important;
-    padding: 10px 12px;">
-       <form id="form-valid"
-       style="padding: 12px 10px;">
+     <div id="form-div">
+       <form id="form-valid">
              <h1 class="text-center py-4" >LogIn</h1>
 
                 <div data-mdb-input-init class="form-outline mb-4">
@@ -63,21 +56,18 @@
                   placeholder="Email-id"/>
                 </div>
 
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="form3Example97" name="dob" class="form-control form-control-lg" 
-                  placeholder="dob"/>
-                </div>
-
                   <div data-mdb-input-init class="form-outline mb-4">
                   <input type="password" id="form3Example97" name="password" class="form-control form-control-lg" 
                   placeholder="Password"/>
                 </div>
-
-                 
-                <div class="d-flex justify-content-center">
-                  <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2"
-                   id="btn">LogIN</button>
-                </div>
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example97" name="dob" class="form-control form-control-lg" 
+                  placeholder="dob"/>
+                </div>                 
+       <div class="d-flex justify-content-center">
+       <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2"
+       id="btn">LogIn</button>
+        </div>   
        </form>
                 </div>
 
@@ -85,7 +75,7 @@
   </div>
  </div>
  
-   <!-- login page -->
+   
 
 
     <script src="./bootstrap.js"></script>
