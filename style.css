@@ -24,7 +24,7 @@ padding: 5px 8px !important;
     border: none !important;
     outline:  none !important;
     background-color:  transparent !important;
-    background-color: blue !important;
+    background-color:  #5b8dfd !important;
     color:  white !important;
 }
    /* NAVBAAR END */
@@ -36,51 +36,50 @@ padding: 5px 8px !important;
     justify-content: center !important;
     align-items: center !important;
 }
+#child{
+  background: #ffffff !important;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    height: auto !important;
+    display: flex !important;
+    width: 80% !important;
+    border-radius: 5% ;
+}
+h1{
+    font-size: 300%;
+    font-weight: bold;
+}
 #form-div{
-border: 1px solid palevioletred;
 width: 25% !important;
 margin-top: 1% !important;
 height: 100v !important;
-}
-#next-div{
-border: 1px solid red;
-width: 35% !important;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-  /* border-radius: 100px 0 0 180px; */
 }
 #form-valid{
     border: none !important;
     outline:  none !important;
     width: 100% !important;
-    border: 1px solid purple !important;
-    /* border: 1px solid pink !important; */
-    /* margin-left: 10% !important; */
-}
-#child{
-    border: 1px solid brown !important;
-    /* border-radius: 100px !important; */
-    height: auto !important;
-    display: flex !important;
-    /* gap: 8% !important; */
-    /* justify-content: space-around !important; */
-    width: 100% !important;
-
 }
 #inner-child{
-    border: 1px solid green;
     height: auto !important;
-    width: 150% !important;
+    width: 180% !important;
 }
 .card-body{
-        border: 1px solid goldenrod !important;
-    /* height: auto !important; */
 height: auto !important;
 width: 100% !important;
 }
-.card-registration {
-    border: 1px solid red !important;
-    width: 100% !important;
+#btn{
+  border: none !important;
+    outline:  none !important;
+    background-color:  transparent !important;
+    background-color:   #5b8dfd !important;
+    color:  white !important;
+}
+#next-div{
+width: 45% !important;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  border-radius: 100px 0 0 180px;
+  background: #5b8dfd;
+  color: white;
 }
