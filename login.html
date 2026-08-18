@@ -8,17 +8,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- navbaar -->
+   <header id="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex">
+            <div class="container" id="nav-div">
+                <a class="navbar-brand" href="#"
+                style="font-weight: bolder;">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNav">
+                  <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning"
+                  id="button">Enrolled Student!</button>
+                  </div>
+            </div>
+        </nav>
+    </header>
+
+ <!-- navbaar -->
+
+<!-- login page -->
    
+
  <div id="parent" class="py-5">
 
-  <div class="container-fluid d-flex w-75  h-auto justify-content-between " id="child">
+  <div class="container-fluid d-flex w-75  h-auto justify-content-center  " id="child"
+  style="justify-content: center !important;
+  display: flex !important;
+  gap: 25% !important;">
     
 
-
-
-
  <!-- Side Panel Linking to Login -->
-    <div id="next-div" class="my-1">
+    <div id="next-div" class="my-1"
+    style="border-radius:  0 100px 180px 0;">
       <h1>Welcome Back!</h1>
       <p>Already have an account?</p>
       <a href="./login.html" class="btn-outline">Login</a>
@@ -26,15 +50,19 @@
 
 
     <!-- Registration Form Section -->
-    <div id="form-div">
-       <form id="form-valid">
+    <div id="form-div"
+    style="border: 1px solid purple !important;
+    width: 35% !important;
+    padding: 10px 12px;">
+       <form id="form-valid"
+       style="padding: 12px 10px;">
              <h1 class="text-center py-4" >LogIn</h1>
 
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="text" id="form3Example97" name="emailid" class="form-control form-control-lg" 
                   placeholder="Email-id"/>
                 </div>
-                
+
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="text" id="form3Example97" name="dob" class="form-control form-control-lg" 
                   placeholder="dob"/>
@@ -48,7 +76,7 @@
                  
                 <div class="d-flex justify-content-center">
                   <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2"
-                   id="btn">Submit form</button>
+                   id="btn">LogIN</button>
                 </div>
        </form>
                 </div>
@@ -57,7 +85,7 @@
   </div>
  </div>
  
-   
+   <!-- login page -->
 
 
     <script src="./bootstrap.js"></script>
