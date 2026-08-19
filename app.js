@@ -33,7 +33,9 @@ let inputs = document.querySelectorAll("input");
 //loginwork;-
 
 let logAccount = document.querySelector("#btn");
-
+let logInemail = document.querySelector("#login-email");
+let logInpass = document.querySelector("#login-pass");
+let logIndob = document.querySelector("#login-dob");
 
 
 if(window.location.pathname.endsWith("/index.html")){
@@ -71,17 +73,54 @@ inputs.forEach((input)=>{
 })
 console.log(userInfo);
 }
+// else if(window.location.pathname.endsWith("/login.html")){
+//     console.log("okkkk")
+// logAccount && logAccount.addEventListener("click",async(e)=>{
+//     e.preventDefault();
+//          const email = logInemail.value.trim();
+//         const password = logInpass.value;
+
+//     console.log("okkkkk!");
+//     const { data, error } = await client.auth.signInWithPassword({
+//   email: email,
+//   password: password,
+// })
+
+// console.log(logInemail.value);
+// console.log(logInpass.value);
+//    console.log("DATA:", data);
+//     console.log("ERROR:", error);
+// })
+
+// }
 else{
     console.log("okkkk")
 }
 
 
 
-logAccount && logAccount.addEventListener("click",async(e)=>{
-    e.preventDefault();
-    console.log("okkkkk!");
-    const { data, error } = await client.auth.signInWithPassword({
-  "email": userInfo.emailid,
-  "password": userInfo.password,
+// logAccount && logAccount.addEventListener("click",async(e)=>{
+//     e.preventDefault();
+//     console.log("okkkkk!");
+//     const { data, error } = await client.auth.signInWithPassword({
+//   "email": logInemail.value,
+//   "password": logInpass.value,
+// })
+
+// console.log(logInemail.value);
+// console.log(logInpass.value);
+//    console.log("DATA:", data);
+//     console.log("ERROR:", error);
+// })
+
+
+
+//enrolled:-
+let enrolBtn = document.querySelector("#button");
+
+enrolBtn && enrolBtn.addEventListener("click",() =>{
+    console.log("ok");
+    window.location.href = "/enrolled.html";
 })
-})
+
+
