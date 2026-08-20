@@ -38,12 +38,10 @@ let logInpass = document.querySelector("#login-pass");
 let logIndob = document.querySelector("#login-dob");
 
 
-if(window.location.pathname.endsWith("/index.html")){
  form && form.addEventListener("submit", async(e)=>{
 e.preventDefault();
  userDta =  new FormData(form)
   userInfo = Object.fromEntries(userDta);
-
 
 
 // supabase insert
@@ -71,31 +69,10 @@ inputs.forEach((input)=>{
     input.value = "";
 })
 })
-console.log(userInfo);
-}
-// else if(window.location.pathname.endsWith("/login.html")){
-//     console.log("okkkk")
-// logAccount && logAccount.addEventListener("click",async(e)=>{
-//     e.preventDefault();
-//          const email = logInemail.value.trim();
-//         const password = logInpass.value;
 
-//     console.log("okkkkk!");
-//     const { data, error } = await client.auth.signInWithPassword({
-//   email: email,
-//   password: password,
-// })
 
-// console.log(logInemail.value);
-// console.log(logInpass.value);
-//    console.log("DATA:", data);
-//     console.log("ERROR:", error);
-// })
 
-// }
-else{
-    console.log("okkkk")
-}
+
 
 
 
@@ -117,10 +94,30 @@ else{
 
 //enrolled:-
 let enrolBtn = document.querySelector("#button");
+console.log(enrolBtn)
 
-enrolBtn && enrolBtn.addEventListener("click",() =>{
-    console.log("ok");
-    window.location.href = "/enrolled.html";
-})
+
+
+      if (enrolBtn) {
+        console.log(window.location.pathname)
+    enrolBtn.addEventListener("click", async () => {
+try{
+        const { data, error } = await client
+            .from("Users-data")
+            .select();
+
+        console.log(data);
+        console.log(error);
+
+        window.location.href = "enrolled.html";
+           console.log(window.location.pathname)
+}
+catch(error){
+    console.log(err)
+}
+    })
+}
+
+
 
 
