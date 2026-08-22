@@ -63,7 +63,7 @@ inputs.forEach((input)=>{
 })
 })
 
-console.log(loginForm)
+// console.log(loginForm)
 loginForm && loginForm.addEventListener("click",async(e)=>{
     e.preventDefault();
     console.log("okkkk")
@@ -112,7 +112,25 @@ setTimeout(()=>{
 })
 
 
+//signout:-
+let signoutBtn = document.querySelector("#button");
+console.log(signoutBtn);
 
+
+signoutBtn && signoutBtn.addEventListener("click",async()=>{
+    if(signoutBtn.innerHTML === "SignOut !"){
+console.log("okkkk");
+const { error } = await client.auth.signOut()
+if(error){
+    console.log("okk");
+}else{
+    console.log("signout!");
+    window.location.href = "./index.html"
+}
+    }else{
+        return;
+    }
+})
 
 
 

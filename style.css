@@ -29,6 +29,15 @@ padding: 5px 8px !important;
     width: auto !important;
     margin: 0 !important;
 }
+.signoutbtn{
+   border: none !important;
+    outline:  none !important;
+    background-color:  transparent !important;
+    background-color:  #5b8dfd !important;
+    color:  white !important;
+    width: auto !important;
+    margin: 0 !important;
+}
    /* NAVBAAR END */
 
 #parent{
