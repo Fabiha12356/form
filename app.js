@@ -22,26 +22,18 @@ let signupbtn = document.querySelector("#signupbtn")
 })
 
 
-let userInfo;
-let userDta;
 
 // form:-
 
 let form = document.querySelector("#form-valid");
 let inputs = document.querySelectorAll("input");
 
-//loginwork;-
-
-let logAccount = document.querySelector("#btn");
-let logInemail = document.querySelector("#login-email");
-let logInpass = document.querySelector("#login-pass");
-let logIndob = document.querySelector("#login-dob");
 
 
  form && form.addEventListener("submit", async(e)=>{
 e.preventDefault();
- userDta =  new FormData(form)
-  userInfo = Object.fromEntries(userDta);
+ let userDta =  new FormData(form)
+ let  userInfo = Object.fromEntries(userDta);
 
 
 // supabase insert
@@ -76,47 +68,6 @@ inputs.forEach((input)=>{
 
 
 
-// logAccount && logAccount.addEventListener("click",async(e)=>{
-//     e.preventDefault();
-//     console.log("okkkkk!");
-//     const { data, error } = await client.auth.signInWithPassword({
-//   "email": logInemail.value,
-//   "password": logInpass.value,
-// })
-
-// console.log(logInemail.value);
-// console.log(logInpass.value);
-//    console.log("DATA:", data);
-//     console.log("ERROR:", error);
-// })
-
-
-
-//enrolled:-
-let enrolBtn = document.querySelector("#button");
-console.log(enrolBtn)
-
-
-
-      if (enrolBtn) {
-        console.log(window.location.pathname)
-    enrolBtn.addEventListener("click", async () => {
-try{
-        const { data, error } = await client
-            .from("Users-data")
-            .select();
-
-        console.log(data);
-        console.log(error);
-
-        window.location.href = "enrolled.html";
-           console.log(window.location.pathname)
-}
-catch(error){
-    console.log(err)
-}
-    })
-}
 
 
 
