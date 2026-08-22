@@ -105,9 +105,9 @@ if(data){
   draggable: true
 });
 }
-inputs.forEach((input)=>{
-    input.value = "";
-})
+setTimeout(()=>{
+    window.location.href = "./home.html";
+},2000)
 
 })
 
