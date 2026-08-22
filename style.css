@@ -62,6 +62,11 @@ padding-left: 15px;
     width: 100% !important;
   
 }
+#login-form{
+     border: none !important;
+    outline:  none !important;
+    width: 100% !important;
+}
 
 button{
   border: none !important;

@@ -26,6 +26,7 @@ let signupbtn = document.querySelector("#signupbtn")
 // form:-
 
 let form = document.querySelector("#form-valid");
+let loginForm=document.querySelector("#login-form");
 let inputs = document.querySelectorAll("input");
 
 
@@ -62,7 +63,53 @@ inputs.forEach((input)=>{
 })
 })
 
+console.log(loginForm)
+loginForm && loginForm.addEventListener("click",async(e)=>{
+    e.preventDefault();
+    console.log("okkkk")
+     let userDta =  new FormData(loginForm)
+ let  userInfo = Object.fromEntries(userDta);
+ console.log(userInfo);
 
+ let{email,password,dob} = userInfo
+ 
+
+ let flag = false
+ inputs.forEach((input)=>{
+    if(input.value === ""){
+        console.log("hello");
+        flag = true;
+    }
+ })
+ if(flag){
+return;
+ }
+ //database insert:-
+ const { error } = await client
+  .from('Users-data')
+  .insert(
+    dob,
+  )
+console.log(error);  //working:-
+//login
+ const { data, error:userError } = await client.auth.signInWithPassword({
+  email,
+   password,
+})
+console.log(data);
+console.log(userError);
+if(data){
+    Swal.fire({
+  title: "SignUp!",
+  icon: "success",
+  draggable: true
+});
+}
+inputs.forEach((input)=>{
+    input.value = "";
+})
+
+})
 
 
 
