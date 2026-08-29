@@ -155,3 +155,13 @@ box-shadow: 0 5px 20px black;
 .title span:nth-child(6):hover {
   color: #8b5cf6;
 }
+/* enrolledbtn */
+#enrolBtn{
+   border: none !important;
+    outline:  none !important;
+    background-color:  transparent !important;
+    background-color:  #5b8dfd !important;
+    color:  white !important;
+    width: auto !important;
+    margin: 0 !important;
+}

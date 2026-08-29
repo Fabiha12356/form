@@ -114,7 +114,7 @@ setTimeout(()=>{
 
 //signout:-
 let signoutBtn = document.querySelector("#button");
-console.log(signoutBtn);
+
 
 
 signoutBtn && signoutBtn.addEventListener("click",async()=>{
@@ -133,6 +133,31 @@ if(error){
 })
 
 
+
+//enrolledbtn:-
+
+let enrolBtn=document.querySelector("#enrolBtn");
+
+ enrolBtn && enrolBtn.addEventListener("click", async(e)=>{
+    e.preventDefault();
+     console.log("okkk");
+     
+
+const { data, error } = await client
+  .from('Users-data')
+  .select()
+
+if(error){
+    console.log("ok");
+    return;
+}else{
+    console.log(data);
+}
+
+  
+    // console.log("pkkk");
+    // console.log("hello"); 
+})
 
 
 
