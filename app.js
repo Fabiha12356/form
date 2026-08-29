@@ -137,43 +137,45 @@ if(error){
 //enrolledbtn:-
 
 let enrolBtn=document.querySelector("#enrolBtn");
+console.log(enrolBtn);
 
-  enrolBtn && enrolBtn.addEventListener("click", async(e)=>{
-    e.preventDefault();
-     console.log("okkk");
-     
 
-const { data, error } = await client
-  .from('Users-data')
-  .select()
-
-if(error){
-    console.log("ok");
-    return;
-}else{
-    console.log(data);
-    let user_dta = data
-     window.location.href = "./enrolled.html"
-    let div = document.querySelector("#print");
-    console.log(div)
-    user_dta.forEach((info)=>{
-        div.innerHTML = ` <div class="card usersUi my-2" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${info.name}</h5>
-    <h6 class="card-title">${info.course}</h6>
-    <h6 class="card-title">${info.email}</h6>
-     <button type="button" class="btn btn-primary btn-lg px-4 gap-3 editbtn" fdprocessedid="yzcxo8" >Edit</button>
-     <button type="button" class="btn btn-outline-secondary btn-lg px-4 delbtn" fdprocessedid="f77nnp" >Delete</button>
-  </div>
-         </div>`
-    })
-}
-
-  
-    // console.log("pkkk");
-    // console.log("hello"); 
+enrolBtn && enrolBtn.addEventListener("click",()=>{
+console.log("okkkk");    
+window.location.href = "./enrolled.html"
 })
 
+// if(window.lo)
+if(window.location.pathname === "/enrolled.html"){
+    console.log("okkkk");
+    const store = async() =>{
+        const { data, error } = await client
+      .from('Users-data')
+      .select()
+      console.log(error);
+      console.log(data);
+
+      let selctivedata = data ;
+      let div = document.querySelector("#print")
+      selctivedata.forEach((info) =>{
+        console.log(info.name);
+        div.innerHTML += `  <div class="col-md-3 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">${info.name}</h2>
+                    <h4 class="card-title">${info.fathername}</h4>
+                    <p class="card-text">${info.course}</p>
+                    <p class="card-text">${info.gender}</p>
+
+                    <button class="btn editBtn">Edit</button>
+                    <button  class="btn dltBtn">Delete</button>
+                </div>
+            </div>
+        </div>`
+      })
+    }
+    store();
+}
 
 
 
