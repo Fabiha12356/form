@@ -138,7 +138,7 @@ if(error){
 
 let enrolBtn=document.querySelector("#enrolBtn");
 
- enrolBtn && enrolBtn.addEventListener("click", async(e)=>{
+  enrolBtn && enrolBtn.addEventListener("click", async(e)=>{
     e.preventDefault();
      console.log("okkk");
      
@@ -152,6 +152,21 @@ if(error){
     return;
 }else{
     console.log(data);
+    let user_dta = data
+     window.location.href = "./enrolled.html"
+    let div = document.querySelector("#print");
+    console.log(div)
+    user_dta.forEach((info)=>{
+        div.innerHTML = ` <div class="card usersUi my-2" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">${info.name}</h5>
+    <h6 class="card-title">${info.course}</h6>
+    <h6 class="card-title">${info.email}</h6>
+     <button type="button" class="btn btn-primary btn-lg px-4 gap-3 editbtn" fdprocessedid="yzcxo8" >Edit</button>
+     <button type="button" class="btn btn-outline-secondary btn-lg px-4 delbtn" fdprocessedid="f77nnp" >Delete</button>
+  </div>
+         </div>`
+    })
 }
 
   
