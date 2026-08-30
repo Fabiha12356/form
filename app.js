@@ -168,14 +168,59 @@ if(window.location.pathname === "/enrolled.html"){
                     <p class="card-text">${info.gender}</p>
 
                     <button class="btn editBtn">Edit</button>
-                    <button  class="btn dltBtn">Delete</button>
+                    <button  class="btn dletBtn">Delete</button>
                 </div>
             </div>
-        </div>`
-      })
-    }
-    store();
+        </div>`   
+})
+             // edit and del
+        let editBtn = document.querySelectorAll(".editBtn");
+    let delBTn = document.querySelectorAll(".dletBtn");
+    console.log(editBtn);
+    console.log(delBTn);
+  
+editBtn.forEach((btn,index)=>{
+    btn.addEventListener("click",async()=>{
+    //sweets alerts 
+      let student = data[index];
+
+  const { value: formValues } = await Swal.fire({
+  title: "Multiple inputs",
+  html: `
+    <input id="swal-input1" class="swal2-input" placeholder="Name" value="${student.name}">
+    <input id="swal-input2" class="swal2-input" placeholder="Course" value="${student.fathername}">
+    <input id="swal-input3" class="swal2-input" placeholder="Email" value="${student.course}">
+    <input id="swal-input4" class="swal2-input" placeholder="Email" value="${student.gender}">
+  `,
+  focusConfirm: false,
+  preConfirm: () => {
+    return [document.getElementById("swal-input1").value,
+       document.getElementById("swal-input2").value,
+       document.getElementById("swal-input3").value,
+       document.getElementById("swal-input4").value];
+  }
+});
+console.log(formValues);
+
+const updateDta ={
+  name : formValues[0],
+  fathername: formValues[1],
+  course: formValues[2],
+  gender: formValues[3],
 }
 
+const { error } = await client
+  .from('Users-data')
+  .update(updateDta)
+  .eq('id', student.id);
+  window.location.reload();
 
+})
+    
+      })
+ 
+}
+ store() 
+
+}
 
