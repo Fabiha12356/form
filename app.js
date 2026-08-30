@@ -199,7 +199,8 @@ editBtn.forEach((btn,index)=>{
        document.getElementById("swal-input3").value,
        document.getElementById("swal-input4").value];
   }
-});
+}
+);
 console.log(formValues);
 
 const updateDta ={
@@ -213,11 +214,30 @@ const { error } = await client
   .from('Users-data')
   .update(updateDta)
   .eq('id', student.id);
+  
   window.location.reload();
 
 })
     
       })
+
+
+
+       delBTn.forEach((btn,index)=>{
+  btn.addEventListener("click", async (e)=>{
+    e.preventDefault();
+  let student = data[index];
+  console.log(student.id);
+  // deleted
+  const response = await client
+  .from('Users-data')
+  .delete()
+  .eq('id', student.id);
+  window.location.reload();
+  })
+})
+
+
  
 }
  store() 
