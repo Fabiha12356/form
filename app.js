@@ -42,7 +42,6 @@ const { error } = await client
   .from('Users-data')
   .insert({
      "name" : userInfo.Username,
-    "course" : userInfo.course,
     "gender" : userInfo.gender,
    })
    //sweets alerts:-
@@ -163,10 +162,7 @@ if(window.location.pathname === "/enrolled.html"){
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title">${info.name}</h2>
-                    <h4 class="card-title">${info.fathername}</h4>
-                    <p class="card-text">${info.course}</p>
                     <p class="card-text">${info.gender}</p>
-
                     <button class="btn editBtn">Edit</button>
                     <button  class="btn dletBtn">Delete</button>
                 </div>
@@ -188,16 +184,12 @@ editBtn.forEach((btn,index)=>{
   title: "Multiple inputs",
   html: `
     <input id="swal-input1" class="swal2-input" placeholder="Name" value="${student.name}">
-    <input id="swal-input2" class="swal2-input" placeholder="Course" value="${student.fathername}">
-    <input id="swal-input3" class="swal2-input" placeholder="Email" value="${student.course}">
-    <input id="swal-input4" class="swal2-input" placeholder="Email" value="${student.gender}">
+    <input id="swal-input2" class="swal2-input" placeholder="Course" value="${student.gender}">
   `,
   focusConfirm: false,
   preConfirm: () => {
     return [document.getElementById("swal-input1").value,
-       document.getElementById("swal-input2").value,
-       document.getElementById("swal-input3").value,
-       document.getElementById("swal-input4").value];
+       document.getElementById("swal-input2").value];
   }
 }
 );
@@ -205,16 +197,14 @@ console.log(formValues);
 
 const updateDta ={
   name : formValues[0],
-  fathername: formValues[1],
-  course: formValues[2],
-  gender: formValues[3],
+  gender: formValues[1],
 }
 
 const { error } = await client
   .from('Users-data')
   .update(updateDta)
   .eq('id', student.id);
-  
+
   window.location.reload();
 
 })
