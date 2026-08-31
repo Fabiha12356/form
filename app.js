@@ -170,12 +170,14 @@ if(window.location.pathname === "/enrolled.html"){
         // </div>`   
         div.innerHTML +=`
         <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h2 class="card-title">${info.name}</h2>
-    <h5 class="card-title">${info.gender}</h5>
+  <div>
+    <h2>${info.name}</h2>
+    <h5>${info.gender}</h5>
+  </div>
+  <div>
      <button class="btn editBtn">Edit</button>
     <button  class="btn dletBtn">Delete</button>
-  </div>
+    </div>
 </div>`
 })
              // edit and del

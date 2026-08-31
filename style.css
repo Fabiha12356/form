@@ -172,20 +172,27 @@ flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 }
-#enrol-div{
-    border: 1px solid red;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; */
-}
 #print{
-  border: 1px solid green !important;
+  /* border: 1px solid green !important; */
   display: flex !important;
   flex-wrap: wrap;
   justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
   gap: 15px;
+  margin-top: 3%;
+}
+.card{
+  border: 1px solid blue !important;
+  display: flex !important;
+   border: none !important;
+ border-radius: 10px !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px) !important;
+        box-shadow: 0 7px 8px 0  #4749734d;   
+        transition: all 1s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
 }
