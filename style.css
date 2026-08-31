@@ -196,3 +196,88 @@ align-items: center;
 .card:hover{
     transform: translateY(-5px);
 }
+
+
+@media screen and (max-width:480px) {
+  #child{
+    width: 100% !important;
+        border-radius: 10px ;
+}
+h1{
+    font-size: 200%;
+    font-weight: bold;
+}
+  }
+ #form-div{
+width: 50% !important;
+padding-right: 1% !important;
+} 
+#next-div{
+width: 50% !important;
+  text-align: center !important;
+  border-radius: 100px !important;
+}
+
+
+@media screen and  (max-width:576px) {
+   #child{
+    width: auto !important;
+        border-radius: 10px ;
+}
+h1{
+    font-size: 200%;
+    font-weight: bold;
+}
+ #form-div{
+width: auto !important;
+padding-right: 1% !important;
+} 
+#next-div{
+width: auto !important;
+  text-align: center !important;
+  border-radius: 100px !important;
+} 
+#nav-div{
+width: 100% !important;
+}
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+   #child{
+    width: 100% !important;
+        border-radius: 10px ;
+}
+h1{
+    font-size: 200%;
+    font-weight: bold;
+}
+  }
+ #form-div{
+width: 50% !important;
+padding-right: 1% !important;
+} 
+#next-div{
+width: 50% !important;
+  text-align: center !important;
+  border-radius: 100px !important;
+} 
+
+@media screen and (min-width:769px) and (max-width:880px) {
+   #child{
+    width: 80% !important;
+        border-radius: 10px ;
+}
+h1{
+    font-size: 200%;
+    font-weight: bold;
+}
+  }
+ #form-div{
+width: 45% !important;
+padding-right: 1% !important;
+} 
+#next-div{
+width: 50% !important;
+  text-align: center !important;
+    border-radius: 100px 25px 25px 180px !important;
+}
