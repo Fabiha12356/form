@@ -166,14 +166,12 @@ box-shadow: 0 5px 20px black;
     margin: 0 !important;
 }
 #enroled{
-  border: 3px solid pink;
   display: flex;
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 }
 #print{
-  /* border: 1px solid green !important; */
   display: flex !important;
   flex-wrap: wrap;
   justify-content: center !important;
@@ -215,7 +213,7 @@ padding-right: 1% !important;
 #next-div{
 width: 50% !important;
   text-align: center !important;
-  border-radius: 100px !important;
+  border-radius: 100px;
 }
 
 
@@ -239,6 +237,9 @@ width: auto !important;
 } 
 #nav-div{
 width: 100% !important;
+}
+#enrolBtn{
+width: auto !important;
 }
 }
 
