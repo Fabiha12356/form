@@ -241,6 +241,10 @@ width: 100% !important;
 #enrolBtn{
 width: auto !important;
 }
+#Home-page{
+  font-size: 50px;
+  width: auto;
+}
 }
 
 @media screen and (min-width:577px) and (max-width:768px) {
@@ -252,7 +256,7 @@ h1{
     font-size: 200%;
     font-weight: bold;
 }
-  }
+  
  #form-div{
 width: 50% !important;
 padding-right: 1% !important;
@@ -262,6 +266,11 @@ width: 50% !important;
   text-align: center !important;
   border-radius: 100px !important;
 } 
+#Home-page{
+  font-size: 50px;
+  width: auto;
+}
+}
 
 @media screen and (min-width:769px) and (max-width:880px) {
    #child{
@@ -272,7 +281,6 @@ h1{
     font-size: 200%;
     font-weight: bold;
 }
-  }
  #form-div{
 width: 45% !important;
 padding-right: 1% !important;
@@ -281,4 +289,9 @@ padding-right: 1% !important;
 width: 50% !important;
   text-align: center !important;
     border-radius: 100px 25px 25px 180px !important;
+}
+#Home-page{
+  font-size: 50px;
+  width: auto;
+}
 }
