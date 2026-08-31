@@ -165,3 +165,27 @@ box-shadow: 0 5px 20px black;
     width: auto !important;
     margin: 0 !important;
 }
+#enroled{
+  border: 3px solid pink;
+  display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+#enrol-div{
+    border: 1px solid red;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; */
+}
+#print{
+  border: 1px solid green !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 15px;
+}

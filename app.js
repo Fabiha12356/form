@@ -158,16 +158,25 @@ if(window.location.pathname === "/enrolled.html"){
       let div = document.querySelector("#print")
       selctivedata.forEach((info) =>{
         console.log(info.name);
-        div.innerHTML += `  <div class="col-md-3 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">${info.name}</h2>
-                    <p class="card-text">${info.gender}</p>
-                    <button class="btn editBtn">Edit</button>
-                    <button  class="btn dletBtn">Delete</button>
-                </div>
-            </div>
-        </div>`   
+        // div.innerHTML += `  <div class="col-md-3 mb-3">
+        //     <div class="card">
+        //         <div class="card-body">
+        //             <h2 class="card-title">${info.name}</h2>
+        //             <p class="card-text">${info.gender}</p>
+        //             <button class="btn editBtn">Edit</button>
+        //             <button  class="btn dletBtn">Delete</button>
+        //         </div>
+        //     </div>
+        // </div>`   
+        div.innerHTML +=`
+        <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">${info.name}</h2>
+    <h5 class="card-title">${info.gender}</h5>
+     <button class="btn editBtn">Edit</button>
+    <button  class="btn dletBtn">Delete</button>
+  </div>
+</div>`
 })
              // edit and del
         let editBtn = document.querySelectorAll(".editBtn");
