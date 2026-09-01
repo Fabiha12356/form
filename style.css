@@ -219,6 +219,12 @@ button{
   width: auto !important;
    padding: 0px !important;
 }
+#loginbtn{
+  width: auto !important;
+}
+#signupbtn{
+  width: auto !important;
+}
 }
 
 @media screen and  (max-width:576px) {
@@ -252,6 +258,12 @@ width: auto !important;
 button{
   width: auto !important;
    padding: 8px !important;
+}
+#loginbtn{
+  width: auto !important;
+}
+#signupbtn{
+  width: auto !important;
 }
 }
 
