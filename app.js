@@ -157,17 +157,7 @@ if(window.location.pathname === "/enrolled.html"){
       let selctivedata = data ;
       let div = document.querySelector("#print")
       selctivedata.forEach((info) =>{
-        console.log(info.name);
-        // div.innerHTML += `  <div class="col-md-3 mb-3">
-        //     <div class="card">
-        //         <div class="card-body">
-        //             <h2 class="card-title">${info.name}</h2>
-        //             <p class="card-text">${info.gender}</p>
-        //             <button class="btn editBtn">Edit</button>
-        //             <button  class="btn dletBtn">Delete</button>
-        //         </div>
-        //     </div>
-        // </div>`   
+        console.log(info.name);  
         div.innerHTML +=`
         <div class="card" style="width: 18rem;">
   <div>
@@ -190,6 +180,7 @@ editBtn.forEach((btn,index)=>{
     btn.addEventListener("click",async()=>{
     //sweets alerts 
       let student = data[index];
+      console.log(student);
 
   const { value: formValues } = await Swal.fire({
   title: "Multiple inputs",
